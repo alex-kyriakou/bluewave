@@ -223,7 +223,9 @@ i {
   margin-top: 8rem;
 }
 
-.showcase-container {
+.showcase-container,
+.plan-trip-container,
+.popular-destinations-container {
   gap: $gap-lg;
 }
 
@@ -244,6 +246,7 @@ i {
 
 .image-box img {
   height: 100%;
+  // width: 100%;
   object-fit: cover;
   transition: transform 0.5s;
 }
@@ -365,4 +368,50 @@ i {
 
 .location-icon {
   cursor: pointer;
+}
+// ======================================
+// Newsletter Section
+.newsletter {
+  background: url(travel_images/newsletter.jpg) center no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 5;
+}
+
+.newsletter::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  z-index: -1;
+}
+
+.newsletter-container {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-container-inner {
+  max-width: 78rem;
+  text-align: center;
+  color: $light-clr;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: $gap-md;
+}
+
+.btn-light {
+  background-color: $light-clr;
+  color: $dark-clr;
+
+  &:hover {
+    color: $light-clr;
+  }
 }
