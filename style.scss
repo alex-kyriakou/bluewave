@@ -17,7 +17,7 @@ $accent-clr: #00cc90;
 $font-size-xsm: 1.2rem;
 $font-size-sm: 1.6rem;
 $font-size-md: 2.4rem;
-$font-size-xl: 3.6rem;
+$font-size-lg: 3.6rem;
 
 $font-family: "Poppins", sans-serif;
 
@@ -82,7 +82,15 @@ i {
 }
 
 .sm-screen-hidden {
-  display: none;
+  display: none !important;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.section {
+  padding-block: $section-spacing;
 }
 
 // ===========================================================
@@ -208,4 +216,95 @@ i {
 
 .header.active-scroll {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+// ================================================
+// Showcase
+.showcase {
+  margin-top: 8rem;
+}
+
+.showcase-container {
+  gap: $gap-lg;
+}
+
+.image-group {
+  grid-template-columns: 2rem repeat(2, 1fr) 2rem repeat(2, 1fr);
+}
+
+.image-box {
+  min-height: 25rem;
+  box-shadow: 2px 2px 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.showcase .image-box {
+  min-height: 25rem;
+}
+
+.image-box img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.image-box img:hover {
+  transform: scale(1.1);
+}
+
+.image-left {
+  grid-column: 1/4;
+  grid-row: 1 / span 10;
+  z-index: 5;
+}
+
+.image-center {
+  grid-column: 3/6;
+  grid-row: 9 / span 10;
+}
+
+.image-right {
+  grid-column: 5/-1;
+  grid-row: 3 / span 10;
+  z-index: 5;
+}
+
+.tagline {
+  display: inline-block;
+  margin-bottom: $margin-sm;
+  font-size: $font-size-xsm;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  color: $accent-clr;
+}
+
+.title {
+  font-size: $font-size-md;
+  margin-bottom: $margin-md;
+}
+
+.main-title {
+  font-size: $font-size-lg;
+}
+
+.accent-text {
+  color: $accent-clr;
+}
+
+.description {
+  margin-bottom: $margin-lg;
+}
+
+.btn {
+  display: inline-block;
+  background-color: $accent-clr;
+  color: $light-clr;
+  padding: 1rem 2.5rem;
+  border-radius: 20px;
+  transition: background-color 0.25s;
+}
+
+.btn:hover {
+  background-color: #00be85;
+  color: #fff;
 }

@@ -11,7 +11,6 @@ const toggleMenu = () => {
 menuToggleIcon.addEventListener("click", toggleMenu);
 
 // add/remove border-bottom when scroll
-
 const headerBorderScroll = () => {
   if (this.scrollY > 30) {
     headerElement.classList.add("active-scroll");
