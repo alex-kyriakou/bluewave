@@ -415,3 +415,41 @@ i {
     color: $light-clr;
   }
 }
+// ==================================================
+// Footer Section
+.footer {
+  background-color: $light-clr;
+  padding-bottom: 4rem;
+
+  & .list-link {
+    transition: color 0.25s;
+
+    &:hover {
+      color: $accent-clr;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.footer .title {
+  font-size: $font-size-sm;
+}
+
+.footer-container-inner {
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: $gap-md;
+}
+
+.contact-information address {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-information .list {
+  flex-direction: row;
+  margin-top: 1.5rem;
+}
