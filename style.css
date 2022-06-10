@@ -316,4 +316,70 @@ i {
   background-color: #00be85;
   color: #fff;
 }
+
+.secondary-grid {
+  gap: 4rem;
+}
+
+.beach-data-wrapper {
+  position: relative;
+}
+
+.beach-data-wrapper.image-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.beach-data {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.beach-data-inner {
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.secondary-btn {
+  border-radius: 0 0 10px 0;
+}
+
+.beach-name {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.beach-location,
+.beach-location.accent-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.btn.place-items-center {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.location-icon {
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
