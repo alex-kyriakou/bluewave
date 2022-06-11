@@ -12,7 +12,7 @@
 
 $light-clr: #fff;
 $dark-clr: #504f4f;
-$accent-clr: #00cc90;
+$accent-clr: #00d5ff;
 
 $font-size-xsm: 1.2rem;
 $font-size-sm: 1.6rem;
@@ -40,6 +40,7 @@ $gap-lg: 4rem;
 html {
   // 10px
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -309,7 +310,7 @@ i {
 }
 
 .btn:hover {
-  background-color: #00be85;
+  background-color: #00c3f9;
   color: #fff;
 }
 

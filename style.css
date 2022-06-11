@@ -10,6 +10,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -94,13 +95,13 @@ i {
 .logo {
   font-size: 2.4rem;
   font-weight: 700;
-  color: #00cc90;
+  color: #00d5ff;
 }
 
 .menu-toggle-icon {
   width: 3.5rem;
   height: 3.5rem;
-  background-color: #00cc90;
+  background-color: #00d5ff;
   cursor: pointer;
   border-radius: 20%;
   padding: 1.5rem;
@@ -139,7 +140,7 @@ i {
           transform: translateY(-50%);
   width: 0.5rem;
   height: 0.5rem;
-  background-color: #00cc90;
+  background-color: #00d5ff;
   border-radius: 50%;
   opacity: 0;
   -webkit-transition: opacity 0.25s;
@@ -285,7 +286,7 @@ i {
   font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #00cc90;
+  color: #00d5ff;
 }
 
 .title {
@@ -298,7 +299,7 @@ i {
 }
 
 .accent-text {
-  color: #00cc90;
+  color: #00d5ff;
 }
 
 .description {
@@ -307,7 +308,7 @@ i {
 
 .btn {
   display: inline-block;
-  background-color: #00cc90;
+  background-color: #00d5ff;
   color: #fff;
   padding: 1rem 2.5rem;
   border-radius: 20px;
@@ -316,7 +317,7 @@ i {
 }
 
 .btn:hover {
-  background-color: #00be85;
+  background-color: #00c3f9;
   color: #fff;
 }
 
@@ -453,7 +454,7 @@ i {
 }
 
 .footer .list-link:hover {
-  color: #00cc90;
+  color: #00d5ff;
 }
 
 .footer .list-link::after {

@@ -1,6 +1,7 @@
 const menuToggleIcon = document.getElementById("menu-toggle-icon");
 const navMobile = document.getElementById("nav");
 const headerElement = document.getElementById("header");
+const navLinks = document.querySelectorAll(".nav-mobile .list-link");
 
 // Toggle Navigation
 const toggleMenu = () => {
@@ -20,3 +21,17 @@ const headerBorderScroll = () => {
 };
 
 window.addEventListener("scroll", headerBorderScroll);
+
+// Add selected link styles to the clicked link and close nav when links clicked
+
+navLinks.forEach((link) =>
+  link.addEventListener("click", () => {
+    navMobile.classList.remove("active");
+    headerElement.classList.remove("active");
+
+    let current = document.getElementsByClassName("current");
+
+    current[0].className = current[0].className.replace("current", "");
+    link.className += " current";
+  })
+);
