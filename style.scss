@@ -234,6 +234,7 @@ i {
 }
 
 .image-box {
+  /* change min-height */
   min-height: 25rem;
   box-shadow: 2px 2px 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -452,4 +453,135 @@ i {
 .contact-information .list {
   flex-direction: row;
   margin-top: 1.5rem;
+}
+//  =========================================================
+// Media Queries
+@media screen and (min-width: 400px) {
+  .btn-group {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .showcase-container,
+  .popular-destinations-container,
+  .plan-trip-container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+    .order-1 {
+      order: 0;
+    }
+
+    .order-2 {
+      order: 1;
+    }
+  }
+
+  .image-box {
+    min-height: 35rem;
+  }
+
+  .beach-data-inner {
+    padding: 1.5rem;
+    transition: opacity 0.25s;
+    opacity: 80%;
+
+    &:hover {
+      opacity: 100%;
+    }
+  }
+
+  .secondary-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 1/-1;
+  }
+
+  .image-box-right {
+    grid-column: 1/-1;
+  }
+
+  .image-box-right .beach-data-inner {
+    width: 50%;
+    border-radius: 0 10px;
+  }
+  .image-box-right .secondary-btn {
+    border-radius: 5px 0 10px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .nav-mobile {
+    background-color: transparent;
+    position: initial;
+    width: initial;
+    padding: initial;
+    z-index: initial;
+    transform: initial;
+    transition: initial;
+
+    .list .list-link {
+      padding: 1rem 2rem;
+    }
+  }
+
+  .nav-mobile .list {
+    flex-direction: row;
+  }
+
+  .list-link::after,
+  .list-link.current::after {
+    top: initial;
+    right: initial;
+    left: 50%;
+    bottom: -1rem;
+  }
+
+  .sm-screen-hidden {
+    display: block !important;
+  }
+
+  .lg-screen-hidden {
+    display: none;
+  }
+
+  .nav.active .nav-mobile {
+    transform: initial;
+  }
+
+  .header::before {
+    display: none;
+  }
+
+  .showcase-container,
+  .popular-destinations-container,
+  .plan-trip-container {
+    gap: 10rem;
+  }
+
+  .showcase .image-box {
+    min-height: 35rem;
+  }
+
+  .secondary-grid {
+    grid-template-columns: 2fr repeat(6, 1fr);
+    gap: 1.5rem;
+  }
+
+  .image-box-left {
+    grid-column: 1 / 2;
+  }
+
+  .image-box-center {
+    grid-column: 2 / 6;
+  }
+
+  .image-box-right {
+    grid-column: 6 / -1;
+
+    .beach-data-inner {
+      width: 100%;
+      border-radius: 0 0 0 10px;
+    }
+  }
 }

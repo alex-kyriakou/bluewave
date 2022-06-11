@@ -225,6 +225,7 @@ i {
 }
 
 .image-box {
+  /* change min-height */
   min-height: 25rem;
   -webkit-box-shadow: 2px 2px 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 2px 2px 1rem rgba(0, 0, 0, 0.1);
@@ -486,5 +487,140 @@ i {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 400px) {
+  .btn-group {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .showcase-container,
+  .popular-destinations-container,
+  .plan-trip-container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .showcase-container .order-1,
+  .popular-destinations-container .order-1,
+  .plan-trip-container .order-1 {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .showcase-container .order-2,
+  .popular-destinations-container .order-2,
+  .plan-trip-container .order-2 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .image-box {
+    min-height: 35rem;
+  }
+  .beach-data-inner {
+    padding: 1.5rem;
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+    opacity: 80%;
+  }
+  .beach-data-inner:hover {
+    opacity: 100%;
+  }
+  .secondary-grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-column: 1/-1;
+  }
+  .image-box-right {
+    grid-column: 1/-1;
+  }
+  .image-box-right .beach-data-inner {
+    width: 50%;
+    border-radius: 0 10px;
+  }
+  .image-box-right .secondary-btn {
+    border-radius: 5px 0 10px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .nav-mobile {
+    background-color: transparent;
+    position: initial;
+    width: initial;
+    padding: initial;
+    z-index: initial;
+    -webkit-transform: initial;
+            transform: initial;
+    -webkit-transition: initial;
+    transition: initial;
+  }
+  .nav-mobile .list .list-link {
+    padding: 1rem 2rem;
+  }
+  .nav-mobile .list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .list-link::after,
+  .list-link.current::after {
+    top: initial;
+    right: initial;
+    left: 50%;
+    bottom: -1rem;
+  }
+  .sm-screen-hidden {
+    display: block !important;
+  }
+  .lg-screen-hidden {
+    display: none;
+  }
+  .nav.active .nav-mobile {
+    -webkit-transform: initial;
+            transform: initial;
+  }
+  .header::before {
+    display: none;
+  }
+  .showcase-container,
+  .popular-destinations-container,
+  .plan-trip-container {
+    gap: 10rem;
+  }
+  .showcase .image-box {
+    min-height: 35rem;
+  }
+  .secondary-grid {
+    -ms-grid-columns: 2fr (1fr)[6];
+        grid-template-columns: 2fr repeat(6, 1fr);
+    gap: 1.5rem;
+  }
+  .image-box-left {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+  .image-box-center {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    grid-column: 2 / 6;
+  }
+  .image-box-right {
+    grid-column: 6 / -1;
+  }
+  .image-box-right .beach-data-inner {
+    width: 100%;
+    border-radius: 0 0 0 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
